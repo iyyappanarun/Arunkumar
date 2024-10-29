@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Food Delivery</title>
+    <link rel="stylesheet" href="food.css">
+</head>
+<body>
+    <header>
+        <h1>Login</h1>
+    </header>
+
+    <main>
+        <form id="login-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" required>
+
+            <button type="submit">Login</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Food Delivery Website</p>
+    </footer>
+
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+
+            // Save user info in local storage
+            localStorage.setItem('user', JSON.stringify({ name, phone }));
+            // Redirect to the main page
+            window.location.href = 'food.html';
+        });
+    </script>
+</body>
+</html>
