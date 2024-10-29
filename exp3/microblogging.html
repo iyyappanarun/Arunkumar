@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microblogging App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Microblogging App</h1>
+        <div class="post-form">
+            <textarea id="postContent" placeholder="What's happening?" required></textarea>
+            <!-- Add file input for image upload -->
+            <input type="file" id="imageInput" accept="image/*">
+            <button id="postButton">Post</button>
+        </div>
+        <div class="posts" id="postsContainer"></div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
